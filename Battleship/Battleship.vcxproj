@@ -128,6 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Battleship.cpp" />
+    <ClCompile Include="BattleshipBoard.cpp" />
+    <ClCompile Include="BattleshipPlayer.cpp" />
+    <ClCompile Include="BattleshipUI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BattleshipBoard.h" />
+    <ClInclude Include="BattleshipPlayer.h" />
+    <ClInclude Include="BattleshipUI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

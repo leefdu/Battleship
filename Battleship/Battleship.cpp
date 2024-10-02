@@ -1,20 +1,30 @@
 // Battleship.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+// Play battleship - initial version has a human player and a computer player
+//   Computer player will random place ship(s)
+//   Human player will fire at the ships and hope to sink it(them) prior to running out of shells
 
 #include <iostream>
+#include <stdlib.h>
+
+
+#include "BattleshipBoard.h"
+#include "BattleshipPlayer.h"
 
 int main()
 {
     std::cout << "Commence Firing!\n";
+
+    // BattleshipPlayer humanPlayer;
+    // 
+    // create two grids (e.g. boards) each for computer player & human player
+    //   For each player - one grid will represent the player's warships & shots by opponent
+    //       the second grid will represent the shots by the player (to hit the opponents warships)
+    //   For the first implementation - the player will be firing shots but has no ships &
+    //      the computer will have a ship, but will not be firing shots
+    BattleshipBoard computerBoard;
+    BattleshipBoard playerBoard;
+
+    std::cout << "cell 0 0 = " << playerBoard.getMyShotsGridValue(0, 0) << std::endl;  // replace this with call to UI to display full grid
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
