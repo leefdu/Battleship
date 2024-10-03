@@ -133,6 +133,7 @@
     <ClCompile Include="BattleshipUI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Battleship.h" />
     <ClInclude Include="BattleshipBoard.h" />
     <ClInclude Include="BattleshipPlayer.h" />
     <ClInclude Include="BattleshipUI.h" />
