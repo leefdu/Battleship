@@ -35,4 +35,6 @@ For this first version of FDU Battleships,
 
 To win, the human player must sink the battleship in 10 turns or less.
 
-Good hunting!)";
+Good hunting!
+
+)";

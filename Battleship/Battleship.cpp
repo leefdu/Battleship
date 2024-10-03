@@ -19,8 +19,6 @@ using namespace std;
 int main()
 {
 
-    std::cout << "Commence Firing!\n";
-
     // create two grids (e.g. boards) each for computer player & human player
     //   For each player - one grid will represent the player's warships & shots by opponent
     //       the second grid will represent the shots by the player (to hit the opponents warships)
@@ -33,6 +31,6 @@ int main()
     console.displayMessage(introMessage);
     console.displayMessage(sprintOneMessage);
 
-    std::cout << "cell 0 0 = " << playerBoard.getMyShotsGridValue(0, 0) << std::endl;  // replace this with call to UI to display full grid
+    console.displayMyShots(playerBoard);
 
 }
