@@ -1,9 +1,3 @@
-/// Battleship.cpp : This file contains the 'main' function. Program execution begins and ends there.
-///
-/// Play battleship - initial version has a human player and a computer player
-///   Computer player will random place ship(s)
-///   Human player will fire at the ships and hope to sink it(them) prior to running out of shells
-
 #include <iostream>
 #include <stdlib.h>
 
@@ -14,6 +8,18 @@
 
 using namespace std;
 
+/*****************************************************************
+ * \file   Battleship.cpp
+ * \brief  main() program to play a computer hack of Battleship
+ *
+ * Version involves a human player and a computer player.
+ * In its initial version, the computer player will randomly place its ships.
+ * The human player will fire at the ships and hope to sink it(them) prior to running out of shells
+ *
+ *
+ * \author Lee
+ * \date   October 2024
+ *********************************************************************/
 
 
 int main()

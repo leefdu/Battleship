@@ -97,15 +97,19 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a116619012b38603eb941c2a14baf8358" id="r_a116619012b38603eb941c2a14baf8358"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a116619012b38603eb941c2a14baf8358">BattleshipUI</a> ()</td></tr>
+<tr class="memdesc:a116619012b38603eb941c2a14baf8358"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI constructor - empty for now, no state information to initialize.  <br /></td></tr>
 <tr class="separator:a116619012b38603eb941c2a14baf8358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2adae9c879bb94a816d5f96dda7de8ae" id="r_a2adae9c879bb94a816d5f96dda7de8ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2adae9c879bb94a816d5f96dda7de8ae">displayMyShots</a> (<a class="el" href="class_battleship_board.html">BattleshipBoard</a> playerGrid)</td></tr>
-<tr class="memdesc:a2adae9c879bb94a816d5f96dda7de8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">assumes grid values returned by getMyShotsGridValue() are 'char' suitable for printing ToDo - change data from char to Enums, and map here in the UI  <br /></td></tr>
+<tr class="memdesc:a2adae9c879bb94a816d5f96dda7de8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">display shots made by player (human or computer), uses the passed in player object to print the grid  <br /></td></tr>
 <tr class="separator:a2adae9c879bb94a816d5f96dda7de8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5b1a9b30cf2a63efdefd28bf6adb2a8" id="r_ab5b1a9b30cf2a63efdefd28bf6adb2a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5b1a9b30cf2a63efdefd28bf6adb2a8">displayOppsShots</a> (<a class="el" href="class_battleship_board.html">BattleshipBoard</a> playerGrid)</td></tr>
+<tr class="memdesc:ab5b1a9b30cf2a63efdefd28bf6adb2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">display shots made by opponent (human or computer), uses the passed in player object to print the grid  <br /></td></tr>
 <tr class="separator:ab5b1a9b30cf2a63efdefd28bf6adb2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0493f26813cf2b1bdd71e7024ff430eb" id="r_a0493f26813cf2b1bdd71e7024ff430eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0493f26813cf2b1bdd71e7024ff430eb">displayMessage</a> (string messageToBeDisplayed)</td></tr>
+<tr class="memdesc:a0493f26813cf2b1bdd71e7024ff430eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">display the specified string on the console  <br /></td></tr>
 <tr class="separator:a0493f26813cf2b1bdd71e7024ff430eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadeb596503f388c059ea4050b8f9c82e" id="r_aadeb596503f388c059ea4050b8f9c82e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadeb596503f388c059ea4050b8f9c82e">getPlayerInput</a> ()</td></tr>
+<tr class="memdesc:aadeb596503f388c059ea4050b8f9c82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the players input, will be validated and processed in another class  <br /></td></tr>
 <tr class="separator:aadeb596503f388c059ea4050b8f9c82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -123,7 +127,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Battleship User Interface class Stateless, solely responsible for all output to display device (initially text based console) as well as raw input from the user Excluded - any input validation Scope includes: Displaying shots by player Displaying shots by opponent against player Displaying messages to the user (e.g. results, error messages) Getting user input </p>
+
+<p>UI constructor - empty for now, no state information to initialize. </p>
 
 </div>
 </div>
@@ -142,13 +147,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>display the specified string on the console </p>
 <p>Display message on the display (e.g. console) </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>to be displayed on the console</td></tr>
   </table>
   </dd>
 </dl>
-<p>Note - method currently adds a newline (std::enl) after displaying the message </p>
+<dl class="section note"><dt>Note</dt><dd>- method currently adds a newline (std::enl) after displaying the message </dd></dl>
 
 </div>
 </div>
@@ -167,13 +174,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>assumes grid values returned by getMyShotsGridValue() are 'char' suitable for printing ToDo - change data from char to Enums, and map here in the UI </p>
+<p>display shots made by player (human or computer), uses the passed in player object to print the grid </p>
 <p>Displays shots by player </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">player</td><td>grid (player instance of <a class="el" href="class_battleship_board.html">BattleshipBoard</a> class) used to access shots taken by player </td></tr>
+    <tr><td class="paramname">player</td><td>grid (player instance of <a class="el" href="class_battleship_board.html">BattleshipBoard</a> class) used to access shots taken by player</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>assumes grid values returned by getMyShotsGridValue() are 'char' suitable for printing <br  />
+ ToDo - change data from char to Enums, and map here in the UI </dd></dl>
 
 </div>
 </div>
@@ -191,7 +200,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Displays shots by opps </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>display shots made by opponent (human or computer), uses the passed in player object to print the grid </p>
+<p>Displays shots by opponent </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>grid (player instance of <a class="el" href="class_battleship_board.html">BattleshipBoard</a> class) used to access shots taken by player</td></tr>
   </table>
@@ -215,7 +226,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return raw input from console (ie from player) input will be validated and processed by caller (ie in another class) return raw string entered by player including all control characters (e.g. new line) //!&lt;</p>
+
+<p>return the players input, will be validated and processed in another class </p>
+<p>return raw input from console (ie from player)</p>
+<dl class="section return"><dt>Returns</dt><dd>raw string entered by player including all control characters (e.g. new line)</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>: input will be validated and processed by caller (ie in another class)</dd></dl>
 <p>ToDo - method not yet implemented </p>
 
 </div>

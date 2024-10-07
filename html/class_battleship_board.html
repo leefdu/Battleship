@@ -87,7 +87,6 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_battleship_board-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BattleshipBoard Class Reference</div></div>
 </div><!--header-->
@@ -98,20 +97,20 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abfbe682d0da6d6dc3c3984930d46162c" id="r_abfbe682d0da6d6dc3c3984930d46162c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfbe682d0da6d6dc3c3984930d46162c">BattleshipBoard</a> ()</td></tr>
-<tr class="memdesc:abfbe682d0da6d6dc3c3984930d46162c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to initialize a battleship board object. Two grids - shots "I" took and shots opponent took both grids initialized to no shots taken ('.') To Do - change stored data to enums.  <br /></td></tr>
+<tr class="memdesc:abfbe682d0da6d6dc3c3984930d46162c"><td class="mdescLeft">&#160;</td><td class="mdescRight">board constructor - creates two grids of GAME_BOARD_SIZE, one for shots taken, other for ship placement &amp; shots taken to sink the ships  <br /></td></tr>
 <tr class="separator:abfbe682d0da6d6dc3c3984930d46162c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad600743e24be1529c808f2829c996676" id="r_ad600743e24be1529c808f2829c996676"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad600743e24be1529c808f2829c996676">getGridSize</a> ()</td></tr>
+<tr class="memdesc:ad600743e24be1529c808f2829c996676"><td class="mdescLeft">&#160;</td><td class="mdescRight"><dl class="section return"><dt>Returns</dt><dd>returns the size of the game grid</dd></dl>
+ <br /></td></tr>
 <tr class="separator:ad600743e24be1529c808f2829c996676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51c92e9b9e12841ec92ae4bd5a01cdfc" id="r_a51c92e9b9e12841ec92ae4bd5a01cdfc"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51c92e9b9e12841ec92ae4bd5a01cdfc">getMyShotsGridValue</a> (int, int)</td></tr>
-<tr class="memdesc:a51c92e9b9e12841ec92ae4bd5a01cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns shot status (e.g. no shot taken) for a given row/column cell.  <br /></td></tr>
+<tr class="memdesc:a51c92e9b9e12841ec92ae4bd5a01cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><dl class="section return"><dt>Returns</dt><dd>character representing if shot fired by player and result (e.g. hit or miss)</dd></dl>
+ <br /></td></tr>
 <tr class="separator:a51c92e9b9e12841ec92ae4bd5a01cdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9b776d94bc3e974ded850a1d15c4a66" id="r_af9b776d94bc3e974ded850a1d15c4a66"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9b776d94bc3e974ded850a1d15c4a66">getOppsShotsGridValue</a> (int row, int column)</td></tr>
+<tr class="memdesc:af9b776d94bc3e974ded850a1d15c4a66"><td class="mdescLeft">&#160;</td><td class="mdescRight"><dl class="section return"><dt>Returns</dt><dd>character representing if shot fired at this player and result (e.g. hit or miss)</dd></dl>
+ <br /></td></tr>
 <tr class="separator:af9b776d94bc3e974ded850a1d15c4a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:ac14a6fbbf25b625061f044f7d3888401" id="r_ac14a6fbbf25b625061f044f7d3888401"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac14a6fbbf25b625061f044f7d3888401">GAME_BOARD_SIZE</a> = 5</td></tr>
-<tr class="separator:ac14a6fbbf25b625061f044f7d3888401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abfbe682d0da6d6dc3c3984930d46162c" name="abfbe682d0da6d6dc3c3984930d46162c"></a>
@@ -129,7 +128,11 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor to initialize a battleship board object. Two grids - shots "I" took and shots opponent took both grids initialized to no shots taken ('.') To Do - change stored data to enums. </p>
+<p>board constructor - creates two grids of GAME_BOARD_SIZE, one for shots taken, other for ship placement &amp; shots taken to sink the ships </p>
+<p>Constructor to initialize a battleship board object. <br  />
+ Two grids - shots "I" took and shots opponent took <br  />
+ both grids initialized to no shots taken ('.') <br  />
+ To Do - design enums for the different status types (e.g. a miss) and change stored data to enums. </p>
 
 </div>
 </div>
@@ -148,6 +151,9 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><dl class="section return"><dt>Returns</dt><dd>returns the size of the game grid</dd></dl>
+</p>
 
 </div>
 </div>
@@ -170,7 +176,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns shot status (e.g. no shot taken) for a given row/column cell. </p>
+<p><dl class="section return"><dt>Returns</dt><dd>character representing if shot fired by player and result (e.g. hit or miss)</dd></dl>
+</p>
+<p>Returns shot status (e.g. no shot taken) for a given row/column cell.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">row</td><td></td></tr>
@@ -201,28 +209,8 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac14a6fbbf25b625061f044f7d3888401" name="ac14a6fbbf25b625061f044f7d3888401"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac14a6fbbf25b625061f044f7d3888401">&#9670;&#160;</a></span>GAME_BOARD_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int BattleshipBoard::GAME_BOARD_SIZE = 5</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p><dl class="section return"><dt>Returns</dt><dd>character representing if shot fired at this player and result (e.g. hit or miss)</dd></dl>
+</p>
 
 </div>
 </div>

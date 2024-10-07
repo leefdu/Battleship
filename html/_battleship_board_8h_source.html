@@ -93,37 +93,47 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <a href="_battleship_board_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="foldopen" id="foldopen00002" data-start="{" data-end="};">
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="class_battleship_board.html">    2</a></span><span class="keyword">class </span><a class="code hl_class" href="class_battleship_board.html">BattleshipBoard</a></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>{</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_battleship_board.html#ac14a6fbbf25b625061f044f7d3888401">    6</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_battleship_board.html#ac14a6fbbf25b625061f044f7d3888401">GAME_BOARD_SIZE</a> = 5; </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_function" href="class_battleship_board.html#abfbe682d0da6d6dc3c3984930d46162c">BattleshipBoard</a>();</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_battleship_board.html#ad600743e24be1529c808f2829c996676">getGridSize</a>();                     <span class="comment">// grids are squares with each side = GAME_BOARD_SIZE, return length of a side</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">char</span> <a class="code hl_function" href="class_battleship_board.html#a51c92e9b9e12841ec92ae4bd5a01cdfc">getMyShotsGridValue</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);               <span class="comment">// status of my previous shot</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">char</span> <a class="code hl_function" href="class_battleship_board.html#af9b776d94bc3e974ded850a1d15c4a66">getOppsShotsGridValue</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column);  <span class="comment">// status of opp shot at this cell - e.g. Boat not hit, boat hit, miss, not fired on</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">//  Two shots grids</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">//  myShotsGrid - 3 values - if player fires, was it a hit, a miss; or has player never fired at this location</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">//  oppsShotGrid - 4- value - if warship on cell, did opp fire &amp; hit it, or not fired on yet; if no warship - did opp fire &amp; miss or not targeted yet</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// ToDo - change values from chars to Enums</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// </span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">char</span> myShotsGrid[<a class="code hl_variable" href="class_battleship_board.html#ac14a6fbbf25b625061f044f7d3888401">GAME_BOARD_SIZE</a>][<a class="code hl_variable" href="class_battleship_board.html#ac14a6fbbf25b625061f044f7d3888401">GAME_BOARD_SIZE</a>];</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">char</span> oppsShotsGrid[<a class="code hl_variable" href="class_battleship_board.html#ac14a6fbbf25b625061f044f7d3888401">GAME_BOARD_SIZE</a>][<a class="code hl_variable" href="class_battleship_board.html#ac14a6fbbf25b625061f044f7d3888401">GAME_BOARD_SIZE</a>];</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*****************************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * \file   BattleshipBoard.h</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * \brief  Battleship game storage for player &amp; computer ship placement &amp; move outcomes (e.g. a miss)</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * &lt;br&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * \author Lee</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * \date   October 2024</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_battleship_board.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_battleship_board.html">BattleshipBoard</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> GAME_BOARD_SIZE = 5; </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">//  Two shots grids</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">//  myShotsGrid - 3 values - if player fires, was it a hit, a miss; or has player never fired at this location</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">//  oppsShotGrid - 4- value - if warship on cell, did opp fire &amp; hit it, or not fired on yet; if no warship - did opp fire &amp; miss or not targeted yet</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// ToDo - change values from chars to Enums</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// </span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">char</span> myShotsGrid[GAME_BOARD_SIZE][GAME_BOARD_SIZE];  </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">char</span> oppsShotsGrid[GAME_BOARD_SIZE][GAME_BOARD_SIZE]; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="class_battleship_board.html#abfbe682d0da6d6dc3c3984930d46162c">BattleshipBoard</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_battleship_board.html#ad600743e24be1529c808f2829c996676">getGridSize</a>();                     <span class="comment">// grids are squares with each side = GAME_BOARD_SIZE, return length of a side</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">char</span> <a class="code hl_function" href="class_battleship_board.html#a51c92e9b9e12841ec92ae4bd5a01cdfc">getMyShotsGridValue</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);               <span class="comment">// status of my previous shot</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">char</span> <a class="code hl_function" href="class_battleship_board.html#af9b776d94bc3e974ded850a1d15c4a66">getOppsShotsGridValue</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column);  <span class="comment">// status of opp shot at this cell - e.g. Boat not hit, boat hit, miss, not fired on</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="ttc" id="aclass_battleship_board_html"><div class="ttname"><a href="class_battleship_board.html">BattleshipBoard</a></div><div class="ttdef"><b>Definition</b> BattleshipBoard.h:3</div></div>
-<div class="ttc" id="aclass_battleship_board_html_a51c92e9b9e12841ec92ae4bd5a01cdfc"><div class="ttname"><a href="class_battleship_board.html#a51c92e9b9e12841ec92ae4bd5a01cdfc">BattleshipBoard::getMyShotsGridValue</a></div><div class="ttdeci">char getMyShotsGridValue(int, int)</div><div class="ttdoc">Returns shot status (e.g. no shot taken) for a given row/column cell.</div><div class="ttdef"><b>Definition</b> BattleshipBoard.cpp:22</div></div>
-<div class="ttc" id="aclass_battleship_board_html_abfbe682d0da6d6dc3c3984930d46162c"><div class="ttname"><a href="class_battleship_board.html#abfbe682d0da6d6dc3c3984930d46162c">BattleshipBoard::BattleshipBoard</a></div><div class="ttdeci">BattleshipBoard()</div><div class="ttdoc">Constructor to initialize a battleship board object. Two grids - shots &quot;I&quot; took and shots opponent to...</div><div class="ttdef"><b>Definition</b> BattleshipBoard.cpp:8</div></div>
-<div class="ttc" id="aclass_battleship_board_html_ac14a6fbbf25b625061f044f7d3888401"><div class="ttname"><a href="class_battleship_board.html#ac14a6fbbf25b625061f044f7d3888401">BattleshipBoard::GAME_BOARD_SIZE</a></div><div class="ttdeci">static const int GAME_BOARD_SIZE</div><div class="ttdef"><b>Definition</b> BattleshipBoard.h:6</div></div>
-<div class="ttc" id="aclass_battleship_board_html_ad600743e24be1529c808f2829c996676"><div class="ttname"><a href="class_battleship_board.html#ad600743e24be1529c808f2829c996676">BattleshipBoard::getGridSize</a></div><div class="ttdeci">int getGridSize()</div><div class="ttdef"><b>Definition</b> BattleshipBoard.cpp:30</div></div>
-<div class="ttc" id="aclass_battleship_board_html_af9b776d94bc3e974ded850a1d15c4a66"><div class="ttname"><a href="class_battleship_board.html#af9b776d94bc3e974ded850a1d15c4a66">BattleshipBoard::getOppsShotsGridValue</a></div><div class="ttdeci">char getOppsShotsGridValue(int row, int column)</div><div class="ttdef"><b>Definition</b> BattleshipBoard.cpp:26</div></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="ttc" id="aclass_battleship_board_html"><div class="ttname"><a href="class_battleship_board.html">BattleshipBoard</a></div><div class="ttdef"><b>Definition</b> BattleshipBoard.h:13</div></div>
+<div class="ttc" id="aclass_battleship_board_html_a51c92e9b9e12841ec92ae4bd5a01cdfc"><div class="ttname"><a href="class_battleship_board.html#a51c92e9b9e12841ec92ae4bd5a01cdfc">BattleshipBoard::getMyShotsGridValue</a></div><div class="ttdeci">char getMyShotsGridValue(int, int)</div><div class="ttdoc">character representing if shot fired by player and result (e.g. hit or miss)</div><div class="ttdef"><b>Definition</b> BattleshipBoard.cpp:32</div></div>
+<div class="ttc" id="aclass_battleship_board_html_abfbe682d0da6d6dc3c3984930d46162c"><div class="ttname"><a href="class_battleship_board.html#abfbe682d0da6d6dc3c3984930d46162c">BattleshipBoard::BattleshipBoard</a></div><div class="ttdeci">BattleshipBoard()</div><div class="ttdoc">board constructor - creates two grids of GAME_BOARD_SIZE, one for shots taken, other for ship placeme...</div><div class="ttdef"><b>Definition</b> BattleshipBoard.cpp:18</div></div>
+<div class="ttc" id="aclass_battleship_board_html_ad600743e24be1529c808f2829c996676"><div class="ttname"><a href="class_battleship_board.html#ad600743e24be1529c808f2829c996676">BattleshipBoard::getGridSize</a></div><div class="ttdeci">int getGridSize()</div><div class="ttdoc">returns the size of the game grid</div><div class="ttdef"><b>Definition</b> BattleshipBoard.cpp:40</div></div>
+<div class="ttc" id="aclass_battleship_board_html_af9b776d94bc3e974ded850a1d15c4a66"><div class="ttname"><a href="class_battleship_board.html#af9b776d94bc3e974ded850a1d15c4a66">BattleshipBoard::getOppsShotsGridValue</a></div><div class="ttdeci">char getOppsShotsGridValue(int row, int column)</div><div class="ttdoc">character representing if shot fired at this player and result (e.g. hit or miss)</div><div class="ttdef"><b>Definition</b> BattleshipBoard.cpp:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

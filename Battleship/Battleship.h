@@ -2,7 +2,20 @@
 
 #include <string>
 
-// All user messages to be displayed are defined here
+/*****************************************************************
+ * \file   Battleship.cpp
+ * \brief  main() program to play a computer hack of Battleship
+ *
+ * Version involves a human player and a computer player.
+ * In its initial version, the computer player will randomly place its ships.
+ * The human player will fire at the ships and hope to sink it(them) prior to running out of shells
+ *
+ *
+ * \author Lee
+ * \date   October 2024
+ *********************************************************************/
+
+/// @brief All user messages to be displayed are defined here
 
 //  Game introduction including rules for full game
 const string introMessage = R"(Battleship (also known as Battleships) is a strategy type guessing game for two players.

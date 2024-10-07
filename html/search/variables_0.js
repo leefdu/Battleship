@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['game_5fboard_5fsize_0',['GAME_BOARD_SIZE',['../class_battleship_board.html#ac14a6fbbf25b625061f044f7d3888401',1,'BattleshipBoard']]]
+  ['intromessage_0',['introMessage',['../_battleship_8h.html#a70baed9632a7695466647707681b0221',1,'Battleship.h']]]
 ];
