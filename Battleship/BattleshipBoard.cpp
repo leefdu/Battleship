@@ -1,5 +1,10 @@
 #include "BattleshipBoard.h"
-
+/// <summary>
+/// Constructor to initialize a battleship board object.
+/// Two grids - shots "I" took and shots opponent took
+///    both grids initialized to no shots taken ('.')
+/// To Do - change stored data to enums
+/// </summary>
 BattleshipBoard::BattleshipBoard() {
 	for (int row = 0; row < GAME_BOARD_SIZE; row++) {
 		for (int column = 0; column < GAME_BOARD_SIZE; column++) {
@@ -8,7 +13,12 @@ BattleshipBoard::BattleshipBoard() {
 		}
 	}
 }
-
+/// <summary>
+/// Returns shot status (e.g. no shot taken) for a given row/column cell
+/// </summary>
+/// <param name="row"></param>
+/// <param name="column"></param>
+/// <returns> status as a printable character.  ToDo - describe values</returns>
 char BattleshipBoard::getMyShotsGridValue(int row, int column) {
 	return myShotsGrid[row][column];
 }
