@@ -1,0 +1,111 @@
+\doxysection{Battleship\+UI Class Reference}
+\hypertarget{class_battleship_u_i}{}\label{class_battleship_u_i}\index{BattleshipUI@{BattleshipUI}}
+
+
+{\ttfamily \#include $<$Battleship\+UI.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_battleship_u_i_a116619012b38603eb941c2a14baf8358}{Battleship\+UI}} ()
+\begin{DoxyCompactList}\small\item\em UI constructor -\/ empty for now, no state information to initialize. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_battleship_u_i_a2adae9c879bb94a816d5f96dda7de8ae}{display\+My\+Shots}} (\mbox{\hyperlink{class_battleship_board}{Battleship\+Board}} player\+Grid)
+\begin{DoxyCompactList}\small\item\em display shots made by player (human or computer), uses the passed in player object to print the grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_battleship_u_i_ab5b1a9b30cf2a63efdefd28bf6adb2a8}{display\+Opps\+Shots}} (\mbox{\hyperlink{class_battleship_board}{Battleship\+Board}} player\+Grid)
+\begin{DoxyCompactList}\small\item\em display shots made by opponent (human or computer), uses the passed in player object to print the grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_battleship_u_i_a0493f26813cf2b1bdd71e7024ff430eb}{display\+Message}} (string message\+To\+Be\+Displayed)
+\begin{DoxyCompactList}\small\item\em display the specified string on the console \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_battleship_u_i_aadeb596503f388c059ea4050b8f9c82e}{get\+Player\+Input}} ()
+\begin{DoxyCompactList}\small\item\em return the players input, will be validated and processed in another class \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_battleship_u_i_a116619012b38603eb941c2a14baf8358}\index{BattleshipUI@{BattleshipUI}!BattleshipUI@{BattleshipUI}}
+\index{BattleshipUI@{BattleshipUI}!BattleshipUI@{BattleshipUI}}
+\doxysubsubsection{\texorpdfstring{BattleshipUI()}{BattleshipUI()}}
+{\footnotesize\ttfamily \label{class_battleship_u_i_a116619012b38603eb941c2a14baf8358} 
+Battleship\+UI\+::\+Battleship\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+UI constructor -\/ empty for now, no state information to initialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_battleship_u_i_a0493f26813cf2b1bdd71e7024ff430eb}\index{BattleshipUI@{BattleshipUI}!displayMessage@{displayMessage}}
+\index{displayMessage@{displayMessage}!BattleshipUI@{BattleshipUI}}
+\doxysubsubsection{\texorpdfstring{displayMessage()}{displayMessage()}}
+{\footnotesize\ttfamily \label{class_battleship_u_i_a0493f26813cf2b1bdd71e7024ff430eb} 
+void Battleship\+UI\+::display\+Message (\begin{DoxyParamCaption}\item[{string}]{message\+To\+Be\+Displayed}{}\end{DoxyParamCaption})}
+
+
+
+display the specified string on the console 
+
+Display message on the display (e.\+g. console) 
+\begin{DoxyParams}{Parameters}
+{\em string} & to be displayed on the console\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+-\/ method currently adds a newline (std\+::enl) after displaying the message 
+\end{DoxyNote}
+\Hypertarget{class_battleship_u_i_a2adae9c879bb94a816d5f96dda7de8ae}\index{BattleshipUI@{BattleshipUI}!displayMyShots@{displayMyShots}}
+\index{displayMyShots@{displayMyShots}!BattleshipUI@{BattleshipUI}}
+\doxysubsubsection{\texorpdfstring{displayMyShots()}{displayMyShots()}}
+{\footnotesize\ttfamily \label{class_battleship_u_i_a2adae9c879bb94a816d5f96dda7de8ae} 
+void Battleship\+UI\+::display\+My\+Shots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_battleship_board}{Battleship\+Board}}}]{player\+Grid}{}\end{DoxyParamCaption})}
+
+
+
+display shots made by player (human or computer), uses the passed in player object to print the grid 
+
+Displays shots by player 
+\begin{DoxyParams}{Parameters}
+{\em player} & grid (player instance of \doxylink{class_battleship_board}{Battleship\+Board} class) used to access shots taken by player\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+assumes grid values returned by get\+My\+Shots\+Grid\+Value() are \textquotesingle{}char\textquotesingle{} suitable for printing ~\newline
+ To\+Do -\/ change data from char to Enums, and map here in the UI 
+\end{DoxyNote}
+\Hypertarget{class_battleship_u_i_ab5b1a9b30cf2a63efdefd28bf6adb2a8}\index{BattleshipUI@{BattleshipUI}!displayOppsShots@{displayOppsShots}}
+\index{displayOppsShots@{displayOppsShots}!BattleshipUI@{BattleshipUI}}
+\doxysubsubsection{\texorpdfstring{displayOppsShots()}{displayOppsShots()}}
+{\footnotesize\ttfamily \label{class_battleship_u_i_ab5b1a9b30cf2a63efdefd28bf6adb2a8} 
+void Battleship\+UI\+::display\+Opps\+Shots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_battleship_board}{Battleship\+Board}}}]{player\+Grid}{}\end{DoxyParamCaption})}
+
+
+
+display shots made by opponent (human or computer), uses the passed in player object to print the grid 
+
+Displays shots by opponent 
+\begin{DoxyParams}{Parameters}
+{\em player} & grid (player instance of \doxylink{class_battleship_board}{Battleship\+Board} class) used to access shots taken by player\\
+\hline
+\end{DoxyParams}
+To\+Do -\/ method not yet implemented \Hypertarget{class_battleship_u_i_aadeb596503f388c059ea4050b8f9c82e}\index{BattleshipUI@{BattleshipUI}!getPlayerInput@{getPlayerInput}}
+\index{getPlayerInput@{getPlayerInput}!BattleshipUI@{BattleshipUI}}
+\doxysubsubsection{\texorpdfstring{getPlayerInput()}{getPlayerInput()}}
+{\footnotesize\ttfamily \label{class_battleship_u_i_aadeb596503f388c059ea4050b8f9c82e} 
+string Battleship\+UI\+::get\+Player\+Input (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+return the players input, will be validated and processed in another class 
+
+return raw input from console (ie from player)
+
+\begin{DoxyReturn}{Returns}
+raw string entered by player including all control characters (e.\+g. new line)
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\+: input will be validated and processed by caller (ie in another class)
+\end{DoxyNote}
+To\+Do -\/ method not yet implemented 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Battleship/\mbox{\hyperlink{_battleship_u_i_8h}{Battleship\+UI.\+h}}\item 
+Battleship/\mbox{\hyperlink{_battleship_u_i_8cpp}{Battleship\+UI.\+cpp}}\end{DoxyCompactItemize}

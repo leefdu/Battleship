@@ -1,0 +1,114 @@
+\doxysection{Battleship\+Board Class Reference}
+\hypertarget{class_battleship_board}{}\label{class_battleship_board}\index{BattleshipBoard@{BattleshipBoard}}
+
+
+{\ttfamily \#include $<$Battleship\+Board.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_battleship_board_abfbe682d0da6d6dc3c3984930d46162c}{Battleship\+Board}} ()
+\begin{DoxyCompactList}\small\item\em board constructor -\/ creates two grids of GAME\+\_\+\+BOARD\+\_\+\+SIZE, one for shots taken, other for ship placement \& shots taken to sink the ships \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_battleship_board_ad600743e24be1529c808f2829c996676}{get\+Grid\+Size}} ()
+\begin{DoxyCompactList}\small\item\em \begin{DoxyReturn}{Returns}
+returns the size of the game grid
+\end{DoxyReturn}
+\end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_battleship_board_a51c92e9b9e12841ec92ae4bd5a01cdfc}{get\+My\+Shots\+Grid\+Value}} (int, int)
+\begin{DoxyCompactList}\small\item\em \begin{DoxyReturn}{Returns}
+character representing if shot fired by player and result (e.\+g. hit or miss)
+\end{DoxyReturn}
+\end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_battleship_board_af9b776d94bc3e974ded850a1d15c4a66}{get\+Opps\+Shots\+Grid\+Value}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em \begin{DoxyReturn}{Returns}
+character representing if shot fired at this player and result (e.\+g. hit or miss)
+\end{DoxyReturn}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_battleship_board_abfbe682d0da6d6dc3c3984930d46162c}\index{BattleshipBoard@{BattleshipBoard}!BattleshipBoard@{BattleshipBoard}}
+\index{BattleshipBoard@{BattleshipBoard}!BattleshipBoard@{BattleshipBoard}}
+\doxysubsubsection{\texorpdfstring{BattleshipBoard()}{BattleshipBoard()}}
+{\footnotesize\ttfamily \label{class_battleship_board_abfbe682d0da6d6dc3c3984930d46162c} 
+Battleship\+Board\+::\+Battleship\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+board constructor -\/ creates two grids of GAME\+\_\+\+BOARD\+\_\+\+SIZE, one for shots taken, other for ship placement \& shots taken to sink the ships 
+
+Constructor to initialize a battleship board object. ~\newline
+ Two grids -\/ shots "{}\+I"{} took and shots opponent took ~\newline
+ both grids initialized to no shots taken (\textquotesingle{}.\textquotesingle{}) ~\newline
+ To Do -\/ design enums for the different status types (e.\+g. a miss) and change stored data to enums. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_battleship_board_ad600743e24be1529c808f2829c996676}\index{BattleshipBoard@{BattleshipBoard}!getGridSize@{getGridSize}}
+\index{getGridSize@{getGridSize}!BattleshipBoard@{BattleshipBoard}}
+\doxysubsubsection{\texorpdfstring{getGridSize()}{getGridSize()}}
+{\footnotesize\ttfamily \label{class_battleship_board_ad600743e24be1529c808f2829c996676} 
+int Battleship\+Board\+::get\+Grid\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\begin{DoxyReturn}{Returns}
+returns the size of the game grid
+\end{DoxyReturn}
+
+
+\Hypertarget{class_battleship_board_a51c92e9b9e12841ec92ae4bd5a01cdfc}\index{BattleshipBoard@{BattleshipBoard}!getMyShotsGridValue@{getMyShotsGridValue}}
+\index{getMyShotsGridValue@{getMyShotsGridValue}!BattleshipBoard@{BattleshipBoard}}
+\doxysubsubsection{\texorpdfstring{getMyShotsGridValue()}{getMyShotsGridValue()}}
+{\footnotesize\ttfamily \label{class_battleship_board_a51c92e9b9e12841ec92ae4bd5a01cdfc} 
+char Battleship\+Board\+::get\+My\+Shots\+Grid\+Value (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{column}{}\end{DoxyParamCaption})}
+
+
+
+\begin{DoxyReturn}{Returns}
+character representing if shot fired by player and result (e.\+g. hit or miss)
+\end{DoxyReturn}
+
+
+Returns player\textquotesingle{}s shot status (e.\+g. no shot taken) for a given row/column cell.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+{\em column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status as a printable character. To\+Do -\/ describe values
+\end{DoxyReturn}
+\Hypertarget{class_battleship_board_af9b776d94bc3e974ded850a1d15c4a66}\index{BattleshipBoard@{BattleshipBoard}!getOppsShotsGridValue@{getOppsShotsGridValue}}
+\index{getOppsShotsGridValue@{getOppsShotsGridValue}!BattleshipBoard@{BattleshipBoard}}
+\doxysubsubsection{\texorpdfstring{getOppsShotsGridValue()}{getOppsShotsGridValue()}}
+{\footnotesize\ttfamily \label{class_battleship_board_af9b776d94bc3e974ded850a1d15c4a66} 
+char Battleship\+Board\+::get\+Opps\+Shots\+Grid\+Value (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{column}{}\end{DoxyParamCaption})}
+
+
+
+\begin{DoxyReturn}{Returns}
+character representing if shot fired at this player and result (e.\+g. hit or miss)
+\end{DoxyReturn}
+
+
+Returns if opponent called the specified row/column and result (e.\+g. hit or miss)
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+{\em column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status as a printable character. To\+Do -\/ describe values
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Battleship/\mbox{\hyperlink{_battleship_board_8h}{Battleship\+Board.\+h}}\item 
+Battleship/\mbox{\hyperlink{_battleship_board_8cpp}{Battleship\+Board.\+cpp}}\end{DoxyCompactItemize}

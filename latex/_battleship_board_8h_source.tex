@@ -1,0 +1,41 @@
+\doxysection{Battleship\+Board.\+h}
+\hypertarget{_battleship_board_8h_source}{}\label{_battleship_board_8h_source}\index{Battleship/BattleshipBoard.h@{Battleship/BattleshipBoard.h}}
+\mbox{\hyperlink{_battleship_board_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*****************************************************************}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \(\backslash\)file\ \ \ BattleshipBoard.h}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \(\backslash\)brief\ \ Battleship\ game\ storage\ for\ player\ \&\ computer\ ship\ placement\ \&\ move\ outcomes\ (e.g.\ a\ miss)}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ <br>}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ \(\backslash\)author\ Lee}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ \(\backslash\)date\ \ \ October\ 2024}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *********************************************************************/}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_battleship_board}{BattleshipBoard}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ GAME\_BOARD\_SIZE\ =\ 5;\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ \ Two\ shots\ grids}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ \ myShotsGrid\ -\/\ 3\ values\ -\/\ if\ player\ fires,\ was\ it\ a\ hit,\ a\ miss;\ or\ has\ player\ never\ fired\ at\ this\ location}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ \ oppsShotGrid\ -\/\ 4-\/\ value\ -\/\ if\ warship\ on\ cell,\ did\ opp\ fire\ \&\ hit\ it,\ or\ not\ fired\ on\ yet;\ if\ no\ warship\ -\/\ did\ opp\ fire\ \&\ miss\ or\ not\ targeted\ yet}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ ToDo\ -\/\ change\ values\ from\ chars\ to\ Enums}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{char}\ myShotsGrid[GAME\_BOARD\_SIZE][GAME\_BOARD\_SIZE];\ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{char}\ oppsShotsGrid[GAME\_BOARD\_SIZE][GAME\_BOARD\_SIZE];\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_battleship_board_abfbe682d0da6d6dc3c3984930d46162c}{BattleshipBoard}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_battleship_board_ad600743e24be1529c808f2829c996676}{getGridSize}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ grids\ are\ squares\ with\ each\ side\ =\ GAME\_BOARD\_SIZE,\ return\ length\ of\ a\ side}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_battleship_board_a51c92e9b9e12841ec92ae4bd5a01cdfc}{getMyShotsGridValue}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ status\ of\ my\ previous\ shot}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_battleship_board_af9b776d94bc3e974ded850a1d15c4a66}{getOppsShotsGridValue}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column);\ \ \textcolor{comment}{//\ status\ of\ opp\ shot\ at\ this\ cell\ -\/\ e.g.\ Boat\ not\ hit,\ boat\ hit,\ miss,\ not\ fired\ on}}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+
+\end{DoxyCode}

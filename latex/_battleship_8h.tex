@@ -1,0 +1,72 @@
+\doxysection{Battleship/\+Battleship.h File Reference}
+\hypertarget{_battleship_8h}{}\label{_battleship_8h}\index{Battleship/Battleship.h@{Battleship/Battleship.h}}
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Battleship.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{_battleship_8h_a70baed9632a7695466647707681b0221}{intro\+Message}}
+\begin{DoxyCompactList}\small\item\em All user messages to be displayed are defined here. \end{DoxyCompactList}\item 
+const string \mbox{\hyperlink{_battleship_8h_ae4a12ab0bbd2cf7d12dddda848bf060a}{sprint\+One\+Message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_battleship_8h_a70baed9632a7695466647707681b0221}\index{Battleship.h@{Battleship.h}!introMessage@{introMessage}}
+\index{introMessage@{introMessage}!Battleship.h@{Battleship.h}}
+\doxysubsubsection{\texorpdfstring{introMessage}{introMessage}}
+{\footnotesize\ttfamily \label{_battleship_8h_a70baed9632a7695466647707681b0221} 
+const string intro\+Message}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ R\textcolor{stringliteral}{"{}(Battleship\ (also\ known\ as\ Battleships)\ is\ a\ strategy\ type\ guessing\ game\ for\ two\ players.}}
+\DoxyCodeLine{\textcolor{stringliteral}{The\ game\ is\ played\ on\ ruled\ grids.\ Each\ player\ has\ a\ grid\ on\ which\ the\ player’s\ fleet\ of\ warships\ is\ marked.\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{The\ locations\ of\ the\ fleets\ are\ concealed\ from\ the\ other\ player.\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{Players\ alternate\ turns\ calling\ "{}shots"{}\ at\ the\ other\ player's\ ships.}}
+\DoxyCodeLine{\textcolor{stringliteral}{The\ objective\ of\ the\ game\ is\ to\ destroy\ the\ opposing\ player's\ fleet.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{Each\ player\ has\ a\ second\ grid\ mimicking\ their\ opponent’s\ grid\ to\ keep\ track\ of\ shots\ fired}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ at\ the\ other\ player’s\ warships\ and\ whether\ those\ shots\ hit\ a\ ship\ or\ missed(landed\ harmlessly\ in\ the\ water).}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{The\ game\ is\ played\ on\ an\ 10x10\ grid\ with\ battleship\ sizes\ ranging\ from\ two\ grid\ cells\ to\ six\ grid\ cells.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{The\ cells\ are\ referenced\ by\ column\ letter(A\ -\/\ J)\ and\ row\ number(1\ -\/\ 10).}}
+\DoxyCodeLine{\textcolor{stringliteral}{Opponents\ take\ turns\ attacking\ by\ calling\ out\ a\ cell\ (e.g.B4\ =\ 2nd\ column,\ 4th\ row)}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{The\ defender\ responds\ with\ “hit”(a\ warship\ occupies\ the\ cell)\ or\ “miss”.}}
+\DoxyCodeLine{\textcolor{stringliteral}{If\ the\ attacker\ shoots\ all\ of\ the\ cells\ a\ warship\ occupies,\ the\ defender\ responds\ with\ "{}you\ sunk\ my\ battleship"{}.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{The\ defender’s\ primary\ grid\ will\ show\ their\ battleship\ as\ well\ as\ hits.}}
+\DoxyCodeLine{\textcolor{stringliteral}{he\ attacker’s\ secondary\ grid\ will\ also\ keep\ track\ of\ the\ cells\ mentioned\ and\ the\ hits\ /\ misses\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ (for\ strategic\ purposes,\ as\ well\ as\ to\ avoid\ calling\ cells\ already\ mentioned).}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{The\ game\ is\ over\ when\ all\ of\ the\ warships\ belonging\ to\ either\ player\ are\ "{}sunk"{})"{}}}
+
+\end{DoxyCode}
+
+
+All user messages to be displayed are defined here. 
+
+\Hypertarget{_battleship_8h_ae4a12ab0bbd2cf7d12dddda848bf060a}\index{Battleship.h@{Battleship.h}!sprintOneMessage@{sprintOneMessage}}
+\index{sprintOneMessage@{sprintOneMessage}!Battleship.h@{Battleship.h}}
+\doxysubsubsection{\texorpdfstring{sprintOneMessage}{sprintOneMessage}}
+{\footnotesize\ttfamily \label{_battleship_8h_ae4a12ab0bbd2cf7d12dddda848bf060a} 
+const string sprint\+One\+Message}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ R\textcolor{stringliteral}{"{}(-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\textcolor{stringliteral}{For\ this\ first\ version\ of\ FDU\ Battleships,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ there\ will\ be\ a\ 5x5\ grid\ (A1\ to\ E5)\ and\ the\ computer\ will\ place\ a\ 3\ cell\ battleship\ on\ its\ grid.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{To\ win,\ the\ human\ player\ must\ sink\ the\ battleship\ in\ 10\ turns\ or\ less.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{Good\ hunting!}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{)"{}}}
+
+\end{DoxyCode}

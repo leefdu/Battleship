@@ -1,0 +1,46 @@
+\doxysection{Battleship\+UI.\+h}
+\hypertarget{_battleship_u_i_8h_source}{}\label{_battleship_u_i_8h_source}\index{Battleship/BattleshipUI.h@{Battleship/BattleshipUI.h}}
+\mbox{\hyperlink{_battleship_u_i_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_battleship_board_8h}{BattleshipBoard.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;\ \ \textcolor{comment}{//\ not\ the\ best,\ but\ practical\ for\ this\ program}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{/*****************************************************************}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ \(\backslash\)file\ \ \ BattleshipUI.h}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ \(\backslash\)brief\ \ Battleship\ User\ Interface\ class}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ <br>}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Stateless,\ solely\ responsible\ for\ all\ output\ to\ display\ device\ (initially\ text\ based\ console)}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ \ \ as\ well\ as\ raw\ input\ from\ the\ user\ <br>}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ Excluded\ -\/\ any\ input\ validation\ <br>}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ Scope\ includes:\ <br>}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ \ \ Displaying\ shots\ by\ player\ <br>}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ \ \ Displaying\ shots\ by\ opponent\ against\ player\ <br>}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ \ \ Displaying\ messages\ to\ the\ user\ (e.g.\ results,\ error\ messages)\ <br>}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ \ \ Getting\ user\ input\ <br>}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ \(\backslash\)author\ Lee}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ \(\backslash\)date\ \ \ October\ 2024}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *********************************************************************/}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_battleship_u_i}{BattleshipUI}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_battleship_u_i_a116619012b38603eb941c2a14baf8358}{BattleshipUI}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battleship_u_i_a2adae9c879bb94a816d5f96dda7de8ae}{displayMyShots}}(\mbox{\hyperlink{class_battleship_board}{BattleshipBoard}}\ playerGrid);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battleship_u_i_ab5b1a9b30cf2a63efdefd28bf6adb2a8}{displayOppsShots}}(\mbox{\hyperlink{class_battleship_board}{BattleshipBoard}}\ playerGrid);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battleship_u_i_a0493f26813cf2b1bdd71e7024ff430eb}{displayMessage}}(\textcolor{keywordtype}{string}\ messageToBeDisplayed);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_battleship_u_i_aadeb596503f388c059ea4050b8f9c82e}{getPlayerInput}}();}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+
+\end{DoxyCode}
