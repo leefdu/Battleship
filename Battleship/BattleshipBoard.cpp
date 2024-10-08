@@ -24,7 +24,7 @@ BattleshipBoard::BattleshipBoard() {
 	}
 }
 /// <summary>
-/// Returns shot status (e.g. no shot taken) for a given row/column cell
+/// Returns player's shot status (e.g. no shot taken) for a given row/column cell
 /// </summary>
 /// <param name="row"></param>
 /// <param name="column"></param>
@@ -33,6 +33,12 @@ char BattleshipBoard::getMyShotsGridValue(int row, int column) {
 	return myShotsGrid[row][column];
 }
 
+/// <summary>
+/// Returns if opponent called the specified row/column and result (e.g. hit or miss)
+/// </summary>
+/// <param name="row"></param>
+/// <param name="column"></param>
+/// <returns> status as a printable character.  ToDo - describe values</returns>
 char BattleshipBoard::getOppsShotsGridValue(int row, int column) {
 	return oppsShotsGrid[row][column];
 }
