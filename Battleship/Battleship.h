@@ -32,7 +32,7 @@ The game is played on an 10x10 grid with battleship sizes ranging from two grid 
 The cells are referenced by column letter(A - J) and row number(1 - 10).
 Opponents take turns attacking by calling out a cell (e.g.B4 = 2nd column, 4th row)
 
-The defender responds with “hit”(a warship occupies the cell) or “miss”.
+The defender responds with "hit"(a warship occupies the cell) or "miss".
 If the attacker shoots all of the cells a warship occupies, the defender responds with "you sunk my battleship".
 
 The defender’s primary grid will show their battleship as well as hits.
